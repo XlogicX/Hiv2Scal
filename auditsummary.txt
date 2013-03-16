@@ -1,0 +1,3 @@
+Make sure you are in the output directory that scalpel used and run the below one-liner to get a summary of all data carved.
+
+perl -e 'my $fields; my $sum = 0; while (<>) {@fields = split /\s+/, $_; if ($fields[3]) {$sum = $fields[3] + $sum;}}print "$sum\n";' < audit.txt
